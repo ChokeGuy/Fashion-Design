@@ -19,18 +19,18 @@ const config: Config = {
       sm: "576px",
       md: "800px",
       lg: "992px",
-      xl: "1230px",
-      "2xl": "1350px",
+      xl: "1290px",
     },
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
+        DEFAULT: "0.9375rem",
       },
     },
     colors: {
-      "primary-color": "#639df1",
-      "secondary-color": "#f22a59",
+      "primary-color": "#6BC785",
+      "banner-color": "#1A4845",
+      "secondary-color": "#1A4845",
       "text-color": "#333",
       background: "#F3F3F3",
       "text-light-color": "#999",
@@ -47,6 +47,9 @@ const config: Config = {
         "128": "32rem",
         "144": "36rem",
       },
+      fontSize: {
+        ssm: "0.75rem",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -56,11 +59,8 @@ const config: Config = {
       borderRadius: {
         "4xl": "2rem",
       },
-      screens: {
-        "3xl": "1600px",
-      },
       fontFamily: {
-        sans: ["var(--font-inter)"],
+        sans: ["var(--font-jost)"],
       },
       keyframes: {
         shine: {
@@ -93,4 +93,5 @@ const config: Config = {
     require("@tailwindcss/aspect-ratio"),
   ],
 };
+
 export default config;

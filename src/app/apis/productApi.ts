@@ -1,10 +1,11 @@
 import {
   ListResponse,
-  ProductResponse,
   ProductRequest,
+  ProductResponse,
   SingleResponse,
-} from "@/models";
+} from "@/src/models";
 import axiosClient from "./axiosClient";
+import handleError from "@/src/utils/handleError";
 
 export const productApi = {
   async getAllProducts(): Promise<ListResponse<ProductResponse>> {
@@ -13,6 +14,30 @@ export const productApi = {
     } catch (error) {
       console.error("Error fetching product:", error);
       throw error;
+    }
+  },
+
+  async getAllProductsByName(
+    name: string
+  ): Promise<ListResponse<ProductResponse> | undefined> {
+    try {
+      if (name && name != "") {
+        return await axiosClient.get(`/products?name=${name}`);
+      }
+      const results: ListResponse<ProductResponse> = {
+        success: false,
+        result: [],
+        statusCode: 0,
+        message: "",
+        pagination: {
+          _limit: 0,
+          _page: 0,
+          _totalRows: 0,
+        },
+      };
+      return results;
+    } catch (error: any) {
+      handleError(error);
     }
   },
 

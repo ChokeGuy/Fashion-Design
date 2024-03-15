@@ -63,6 +63,32 @@ const config: Config = {
         sans: ["var(--font-jost)"],
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeOut: {
+          "100%": { opacity: "1" },
+          "0%": { opacity: "0" },
+        },
+        appearFromRight: {
+          "0%": { transform: "translateX(24px)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        zoomIn: {
+          "0%": { transform: "scale(0)" },
+          "100%": { transform: "scale(1)" },
+        },
+        zoomOut: {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(0)" },
+        },
+        upDown: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(30px)" },
+          "100%": { transform: "translateY(0)" },
+          "75%": { transform: "translateY(5px)" },
+        },
         shine: {
           "100%": {
             left: "125%",
@@ -78,8 +104,14 @@ const config: Config = {
         },
       },
       animation: {
+        fadeIn: "fadeIn 0.5s ease-in-out",
+        fadeOut: "fadeOut 0.5s ease-in-out",
+        appearFromRight: "appearFromRight 1s ease-in-out",
+        zoomIn: "zoomIn 1.5s ease-in-out",
+        zoomOut: "zoomOut 0.75s ease-in-out",
+        upDown: "upDown 30s infinite",
         shine: "shine 0.85s ease",
-        appear: "appear 0.8s ease",
+        appear: "appear 0.5s ease",
       },
       boxShadow: {
         sd: "0 35px 60px -15px rgba(0, 0, 0, 0.3)",

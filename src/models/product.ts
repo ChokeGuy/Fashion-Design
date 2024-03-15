@@ -1,4 +1,3 @@
-
 type ProductType = {
   id: number | string;
   name: string;
@@ -7,16 +6,10 @@ type ProductType = {
   description: string;
   color: string;
   createdAt?: string;
-  reactions: {
-    thumbsUp: number;
-    hooray: number;
-    heart: number;
-    rocket: number;
-    eyes: number;
-  };
+  slug: string;
 };
 
-type ProductRequest = Omit<ProductType, "id" | "reactions">;
-type ProductResponse = ProductType ;
+type ProductRequest = Omit<ProductType, "id">;
+type ProductResponse = ProductType;
 
 export type { ProductType, ProductRequest, ProductResponse };

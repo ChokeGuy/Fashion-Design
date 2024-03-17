@@ -13,12 +13,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import { styled } from "@mui/material/styles";
 import { useCallback, useState } from "react";
 import { debounce } from "lodash";
-import TemporaryDrawer from "./Drawer";
-import CircularIndeterminate from "./Progress";
-import { productApi } from "../apis/productApi";
+import TemporaryDrawer from "../Drawer";
+import CircularIndeterminate from "../Progress";
+import { productApi } from "../../apis/productApi";
 import { ProductType } from "@/src/models";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Dropdown from "./Dropdown";
+import Dropdown from "../Dropdown";
 
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -82,15 +82,11 @@ export const Nav = ({ openSearch, handleOpenSearch }: NavProps) => {
                 <Image className="w-[7.5rem]" src={logo} alt="Logo"></Image>
               </Link>
             </div>
-            <div className="hidden items-center gap-x-8 justify-between lg:flex">
+            <div className="hidden items-center gap-x-8 justify-between lg:flex font-medium">
               {NAV_LINKS.map((link) => {
                 if (link === "BLOG" || link === "CONTACT") {
                   return (
-                    <Link
-                      className="font-bold"
-                      key={link}
-                      href={`/${link.toLowerCase()}`}
-                    >
+                    <Link key={link} href={`/${link.toLowerCase()}`}>
                       {link}
                     </Link>
                   );
@@ -169,15 +165,11 @@ export const Nav = ({ openSearch, handleOpenSearch }: NavProps) => {
             <TemporaryDrawer search={handleOpenSearch} />
           </div>
         </div>
-        <div className="lg:hidden items-center gap-x-4 md:gap-x-8  justify-center flex pb-1">
+        <div className="lg:hidden items-center gap-x-4 md:gap-x-8  justify-center flex pb-1 font-medium">
           {NAV_LINKS.map((link) => {
             if (link === "BLOG" || link === "CONTACT") {
               return (
-                <Link
-                  className="font-bold"
-                  key={link}
-                  href={`/${link.toLowerCase()}`}
-                >
+                <Link key={link} href={`/${link.toLowerCase()}`}>
                   {link}
                 </Link>
               );

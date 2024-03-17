@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { useState } from "react";
 interface DropdownProps {
   hoverChildren: React.ReactNode;
@@ -19,7 +18,7 @@ const Dropdown: React.FC<DropdownProps> = ({ hoverChildren, children }) => {
   return (
     <>
       <div
-        className="relative font-bold  after:absolute after:h-[34px] 
+        className="relative  after:absolute after:h-[34px] 
         after:content-[''] after:top-5 after:left-0 after:right-0"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

@@ -28,9 +28,9 @@ const config: Config = {
       },
     },
     colors: {
-      "primary-color": "#6BC785",
+      "primary-color": "#1A4845",
+      "secondary-color": "#47b486",
       "banner-color": "#1A4845",
-      "secondary-color": "#1A4845",
       "text-color": "#333",
       background: "#F3F3F3",
       "text-light-color": "#999",

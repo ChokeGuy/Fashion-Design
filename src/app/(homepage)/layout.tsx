@@ -1,10 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { Nav } from "../components/Nav";
+import { Nav } from "../components/homepage/Nav";
 import Image from "next/image";
 import Link from "next/link";
 import { logo } from "@/src/assests";
-import Banner from "../components/Banner";
 
 type Props = {
   children: React.ReactNode;
@@ -27,13 +26,10 @@ const HomePageLayout = ({ children }: Props) => {
       </div>
       <Nav openSearch={openSearch} handleOpenSearch={handleOpenSearch} />
 
-      {/* Banner Section */}
-      <Banner />
-
       {!openSearch && (
         <React.Fragment>
           {/* Main Section */}
-          <main className="h-screen container animate-appear">{children}</main>
+          <main className="animate-appear">{children}</main>
 
           {/* Footer Section */}
           <footer className="lg:container sssm:px-4 animate-appear ">
@@ -107,8 +103,8 @@ const HomePageLayout = ({ children }: Props) => {
                 </ul>
               </div>
             </div>
-            <div className="py-8 text-center text-secondary-color">
-              &copy; 2024 Bản quyền thuộc về ngô thừa ân và nguyễn ngọc thắng.
+            <div className="py-8 text-center text-primary-color">
+              &copy; 2024 Bản quyền thuộc về Ngô Thừa Ân và Nguyễn Ngọc Thắng.
               Vui lòng không sao chép dưới mọi hình thức
             </div>
           </footer>

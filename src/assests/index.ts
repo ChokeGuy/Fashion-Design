@@ -1,3 +1,3 @@
 import logo from "./logo.png";
-
-export { logo };
+import banner1 from "./banner-1.jpg";
+export { logo, banner1 };

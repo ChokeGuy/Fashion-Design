@@ -50,6 +50,37 @@ a {
   gap: 0.25rem;
   bottom: 6px !important;
 }
+.carousel-container {
+  width: 100%;
+  padding: 1rem;
+  column-gap: 1rem;
+}
+.carousel-item {
+  padding: 0.75rem;
+}
+
+.react-multi-carousel-track {
+  margin: -1rem !important;
+}
+
+[class*="react-multiple-carousel"] {
+  background-color: black !important;
+  border-radius: 0 !important;
+  top: 35% !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+}
+
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  left: 1px !important;
+}
+
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+  right: 1px !important;
+}
+[class*="react-multiple-carousel"]:hover {
+  background-color: #47b486 !important;
+}
 
 /* Custom CSS */
 @layer components {

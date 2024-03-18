@@ -71,9 +71,9 @@ const config: Config = {
           "100%": { opacity: "1" },
           "0%": { opacity: "0" },
         },
-        appearFromRight: {
-          "0%": { transform: "translateX(24px)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
+        appearFromBottom: {
+          "0%": { transform: "translateY(12px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
         zoomIn: {
           "0%": { transform: "scale(0)" },
@@ -106,7 +106,7 @@ const config: Config = {
       animation: {
         fadeIn: "fadeIn 0.5s ease-in-out",
         fadeOut: "fadeOut 0.5s ease-in-out",
-        appearFromRight: "appearFromRight 1s ease-in-out",
+        appearFromBottom: "appearFromBottom 0.5s forwards",
         zoomIn: "zoomIn 1.5s ease-in-out",
         zoomOut: "zoomOut 0.75s ease-in-out",
         upDown: "upDown 30s infinite",

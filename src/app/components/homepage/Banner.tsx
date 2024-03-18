@@ -2,7 +2,7 @@ import { banner1 } from "@/src/assests";
 import Image from "next/image";
 import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
-import { MyArrowNext, MyArrowPrev } from "../Arrow";
+import { MyArrowNext, MyArrowPrev } from "../Arrows";
 import { MyIndicator } from "../Indicator";
 
 const Banner = () => {

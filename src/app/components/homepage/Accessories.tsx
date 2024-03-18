@@ -1,15 +1,9 @@
-import { product1 } from "@/src/assests";
+import { accessories, product1 } from "@/src/assests";
 import Image from "next/image";
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
-import Carousel from "react-multi-carousel";
-import { responsive } from "@/src/utils/carouselResponsive";
-
-interface FeaturedProductProps {
-  // Define the props for the FeaturedProduct component here
-}
-
-const FeaturedProduct = () => {
+import EastIcon from "@mui/icons-material/East";
+const Accessories = () => {
   const [product, setProduct] = React.useState([
     {
       productId: 1,
@@ -27,47 +21,28 @@ const FeaturedProduct = () => {
       active: "red",
       productId: 4,
     },
-    {
-      active: "red",
-      productId: 5,
-    },
   ]);
   // Implement the FeaturedProduct component logic here
-  const products = [1, 2, 3, 4, 5];
+  const products = [1, 2, 3, 4];
   return (
-    <section className="lg:container mt-0 md:mt-16 transition-all ">
-      {/* title */}
-      <div className="flex justify-between items-start max-lg:flex-col gap-x-32 gap-y-1 p-4">
-        <h2 className="text-lg md:text-3xl font-medium lg:flex-[0_0_35%] lg:max-w-[35%] transition-all">
-          Featured Products
-        </h2>
-        <p className="text-sm md:text-lg text-left transition-all text-text-color">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis.
-        </p>
-      </div>
-      <div className="pb-4 md:pb-12">
-        <Carousel
-          swipeable={true}
-          draggable={false}
-          // ssr={true}
-          responsive={responsive}
-          infinite={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          transitionDuration={500}
-          removeArrowOnDeviceType={["mobile"]}
-          arrows={true}
-          deviceType={"desktop"}
-          containerClass="carousel-container"
-          itemClass="carousel-item"
-        >
+    <section className="lg:container">
+      <div className="p-4 lg:p-0">
+        <div>
+          <Image
+            width={1230}
+            height={900}
+            className="w-full h-56 md:h-64 object-cover xl:h-96 transition-all"
+            src={accessories}
+            alt="Accessories"
+          ></Image>
+        </div>
+        <div className="grid gap-y-4 gap-x-6 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 py-8">
           {products &&
             products.map((p) => (
               <div
-                className="relative hover:cursor-pointer group animate-fadeIn"
+                className={`relative hover:cursor-pointer group animate-fadeIn ${
+                  p === 4 ? "md:hidden xl:block" : "block"
+                }`}
                 key={p}
               >
                 <div className="group-hover:shadow-md transition-all">
@@ -140,10 +115,16 @@ const FeaturedProduct = () => {
                 </label>
               </div>
             ))}
-        </Carousel>
+        </div>
+        <div className="w-full grid place-items-center">
+          <button className=" bg-black text-white py-3 px-8 rounded-lg hover:bg-primary-color flex items-center gap-x-2">
+            <span>Xem thêm</span>
+            <EastIcon />
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
-export default FeaturedProduct;
+export default Accessories;

@@ -26,8 +26,8 @@ const Accessories = () => {
   const products = [1, 2, 3, 4];
   return (
     <section className="lg:container">
-      <div className="p-4 lg:p-0">
-        <div>
+      <div className="">
+        <div className="px-0 lg:px-4">
           <Image
             width={1230}
             height={900}
@@ -36,7 +36,7 @@ const Accessories = () => {
             alt="Accessories"
           ></Image>
         </div>
-        <div className="grid gap-y-4 gap-x-6 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 py-8">
+        <div className="grid gap-y-4 gap-x-6 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 px-4 py-8">
           {products &&
             products.map((p) => (
               <div
@@ -50,7 +50,7 @@ const Accessories = () => {
                     <Image
                       width={300}
                       height={300}
-                      // className="size-full"
+                      className="size-full"
                       src={product1}
                       alt="product"
                     />
@@ -116,7 +116,7 @@ const Accessories = () => {
               </div>
             ))}
         </div>
-        <div className="w-full grid place-items-center">
+        <div className="grid place-items-center pb-12 border-b border-border-color mx-4">
           <button className=" bg-black text-white py-3 px-8 rounded-lg hover:bg-primary-color flex items-center gap-x-2">
             <span>Xem thêm</span>
             <EastIcon />

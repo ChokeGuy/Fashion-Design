@@ -34,7 +34,7 @@ const HomePageLayout = ({ children }: Props) => {
           {/* Footer Section */}
           <footer className="lg:container sssm:px-4 animate-appear ">
             <div className="grid grid-cols-12 gap-x-8 xl:gap-x-[9rem] gap-y-8 border-b border-border-color py-[3.75rem]">
-              <div className="col-span-full md:col-span-4 xl:col-span-3 text-sm flex flex-col md:gap-y-4 lg:gap-y-4">
+              <div className="col-span-full md:col-span-4 xl:col-span-3 text-sm flex flex-col gap-y-4">
                 <Link href="/">
                   <Image
                     className="w-[9rem] aspect-[148/33]"

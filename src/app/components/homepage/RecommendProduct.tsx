@@ -1,16 +1,12 @@
-import { product1 } from "@/src/assests";
-import Image from "next/image";
-import React from "react";
-import StarIcon from "@mui/icons-material/Star";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
-import { responsive } from "@/src/utils/carouselResponsive";
+import StarIcon from "@mui/icons-material/Star";
+import { product1 } from "@/src/assests";
+import { responsive2 } from "@/src/utils/carouselResponsive";
+import Image from "next/image";
 
-interface FeaturedProductProps {
-  // Define the props for the FeaturedProduct component here
-}
-
-const FeaturedProduct = () => {
-  const [product, setProduct] = React.useState([
+export default function RecommendProduct() {
+  const [product, setProduct] = useState([
     {
       productId: 1,
       active: "red",
@@ -39,7 +35,7 @@ const FeaturedProduct = () => {
       {/* title */}
       <div className="flex justify-between items-start max-lg:flex-col gap-x-32 gap-y-1 p-4">
         <h2 className="text-lg md:text-3xl font-medium lg:flex-[0_0_35%] lg:max-w-[35%] transition-all">
-          Featured Products
+          Recommended Products
         </h2>
         <p className="text-sm md:text-lg text-left transition-all text-text-color">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -53,7 +49,7 @@ const FeaturedProduct = () => {
           swipeable={true}
           draggable={false}
           // ssr={true}
-          responsive={responsive}
+          responsive={responsive2}
           infinite={true}
           autoPlaySpeed={3000}
           keyBoardControl={true}
@@ -142,8 +138,7 @@ const FeaturedProduct = () => {
             ))}
         </Carousel>
       </div>
+      <div className="mx-4 border-b border-border-color"></div>
     </section>
   );
-};
-
-export default FeaturedProduct;
+}

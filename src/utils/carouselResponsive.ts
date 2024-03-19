@@ -17,4 +17,24 @@ const responsive = {
     items: 2,
   },
 };
-export { responsive };
+const responsive2 = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 640 },
+    items: 3,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1290 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1290, min: 640 },
+    items: 3,
+  },
+  mobile: {
+    breakpoint: { max: 640, min: 0 },
+    items: 2,
+  },
+};
+
+export { responsive, responsive2 };

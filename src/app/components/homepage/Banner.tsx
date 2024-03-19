@@ -43,7 +43,7 @@ const Banner = () => {
                 <span>Essential Collection</span>
               </p>
               <button className="my-button w-32 hover:bg-primary-color ">
-                See more
+                Xem thêm
               </button>
             </div>
           </article>
@@ -67,7 +67,7 @@ const Banner = () => {
                 <span>Essential Collection</span>
               </p>
               <button className="my-button w-32 hover:bg-primary-color ">
-                See more
+                Xem thêm
               </button>
             </div>
           </article>

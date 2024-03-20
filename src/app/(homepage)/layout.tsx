@@ -25,7 +25,7 @@ const HomePageLayout = ({ children }: Props) => {
         </p>
       </div>
       <Nav openSearch={openSearch} handleOpenSearch={handleOpenSearch} />
-
+      
       {!openSearch && (
         <React.Fragment>
           {/* Main Section */}

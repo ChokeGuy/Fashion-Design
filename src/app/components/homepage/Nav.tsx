@@ -20,7 +20,7 @@ import { ProductType } from "@/src/models";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Dropdown from "../Dropdown";
 
-const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
+export const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: 2,
     top: 2,
@@ -200,7 +200,7 @@ export const Nav = ({ openSearch, handleOpenSearch }: NavProps) => {
         </div>
       </nav>
       {openSearch && (
-        <div className="pt-[132px] bg-white absolute bottom-0 left-0 right-0 z-10 h-screen animate-appear">
+        <div className="pt-[142px] md:pt-[132px] bg-white absolute bottom-0 left-0 right-0 z-10 h-screen animate-appear">
           <div className="container pt-7">
             <div className="">
               <p className="mb-2.5 flex justify-between items-center">

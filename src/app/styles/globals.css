@@ -91,4 +91,13 @@ a {
   .my-button {
     @apply bg-black rounded-full text-white px-4 py-2 grid place-items-center cursor-pointer transition-all;
   }
+  .left-right-line {
+    @apply relative  before:bg-text-light-color
+      before:absolute before:top-1/2 before:w-[140px] before:left-0
+      before:h-[1px] after:bg-text-light-color after:absolute 
+      after:top-1/2 after:w-[140px] after:right-0 after:h-[1px];
+  }
+}
+.error-field {
+  border: 1px solid red;
 }

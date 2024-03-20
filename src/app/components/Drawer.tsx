@@ -12,6 +12,8 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import { Style } from "@mui/icons-material";
+import { StyledBadge } from "./homepage/Nav";
 type Anchor = "right";
 
 export default function TemporaryDrawer({ search }: { search: () => void }) {
@@ -29,11 +31,25 @@ export default function TemporaryDrawer({ search }: { search: () => void }) {
     },
     {
       name: "Notifications",
-      icon: <NotificationsNoneIcon />,
+      icon: (
+        <StyledBadge
+          badgeContent={0}
+          color="error"
+          showZero
+          max={999}
+          className="cursor-pointer"
+        >
+          <NotificationsNoneIcon />
+        </StyledBadge>
+      ),
     },
     {
       name: "Cart",
-      icon: <WorkOutlineIcon />,
+      icon: (
+        <StyledBadge badgeContent={0} color="error" showZero max={999}>
+          <WorkOutlineIcon />
+        </StyledBadge>
+      ),
     },
   ]);
 
@@ -65,7 +81,7 @@ export default function TemporaryDrawer({ search }: { search: () => void }) {
             key={content.name}
             disablePadding
           >
-            <ListItemButton>
+            <ListItemButton className="cursor-pointer px-4 py-2">
               <ListItemIcon>{content.icon}</ListItemIcon>
               <ListItemText primary={content.name} />
             </ListItemButton>

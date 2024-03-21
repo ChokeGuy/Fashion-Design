@@ -7,18 +7,23 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const imageUrl =
+    "https://res.cloudinary.com/dt2yrsa81/image/upload/v1711022488/account-bg_cla1tm.svg" ||
+    account;
   return (
-    <main className="h-screen w-full grid place-items-center">
+    <main className="min-h-screen w-full grid place-items-center">
       <div className="fixed inset-0 z-0">
         <Image
+          placeholder={"blur"}
+          blurDataURL={imageUrl}
           width={1920}
           height={1080}
           className="size-full inset-0 object-cover object-center z-0"
-          src={account}
+          src={imageUrl}
           alt="account-img"
         ></Image>
       </div>
-      <div className="relative z-10 -top-8">{children}</div>
+      <div className="relative z-10">{children}</div>
     </main>
   );
 };
